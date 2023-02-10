@@ -5,11 +5,12 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.string :description
       t.decimal :rating
       t.float :price
-      t.references :inventory, null: false, foreign_key: true
-      t.references :discount, null: false, foreign_key: true
-      t.references :category, null: false, foreign_key: true
+      t.integer :inventory_id
+      t.integer :discount_id
+      t.integer :category_id
 
       t.timestamps
     end
   end
 end
+0
